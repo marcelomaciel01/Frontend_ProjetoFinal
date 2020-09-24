@@ -1,0 +1,326 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.alert {
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    z-index: 99;
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    top: 10%;
+    left: 23%;
+    position: fixed;
+}
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+/* Full-width input fields */
+input[type=text],[type=number],[type=password],[type=list], select {
+    width: 100%;
+    height: 35px;
+    padding: 5px 25px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.savebutton {
+  width: 100px;
+  height:15px;
+  float: auto;
+  background-color: #4CAF50;
+  color: white;
+  text-align:center;
+  line-height: 0;
+  vertical-align: middle;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+.savebutton2 {
+  width: 100px;
+  height:15px;
+  float: auto;
+  background-color: #FFFF00;
+  color: white;
+  line-height: 0;
+  text-align:center;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 40px;
+}
+
+.savebutton:hover {
+    opacity: 0.5;
+}
+
+.savebutton2:hover {
+    opacity: 0.5;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #FFA500;
+    color: white;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+input[type="file"] {
+    display: block;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 2px 10px;
+    cursor: pointer;
+    background-color: #D3D3D3;
+}
+
+/* Center the image and position the close button */
+.top-line {
+    width: 100%;
+    height: 2px;
+    background-color: #FFA500;
+}
+
+.bottom-line {
+    width: 100%;
+    background-color: rgb(255,102,0);
+    padding-top: 60px;
+    border: 1px solid black;
+}
+
+.label-font {
+    font-family: Segoe UI Light;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0 10px 0 15px;
+    float: left;
+    line-height: 75px;
+}
+
+.text-font {
+    font-family: Segoe UI Light;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.text-font2 {
+    font-family: Segoe UI Light;
+    font-size: 16px;
+    text-decoration: none;
+    color:green;
+    font-weight:bold;
+    position: relative;
+}
+
+.text-font3 {
+    font-family: Calibri;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.imgcontainer {
+    text-align: left;
+    position: relative;
+    padding: 5px;
+}
+
+img.avatar {
+    width: 70px;
+    border-radius: 20%;
+    float: left;
+
+}
+
+.container {
+    padding: 100px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    margin: auto;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #fefefe; /* Fallback color */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    border: 1px solid #888;
+    width: 100%; /* Could be more or less, depending on screen size */
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #FFA500;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 20%;
+  right: 0;
+  z-index: 2; /* Sit on top */
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  display: "none";
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+progress {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: #f3f3f3;
+    border: 0;
+    height: 30px;
+    border-radius: 9px;
+  }
+
+progress::-webkit-progress-bar {
+    background-color: #777;
+    border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+    background-color: rgb(0,128,0);
+    border-radius: 20px;
+}
+
+/* MOZILLA FIREFOX */
+progress::-moz-progress-bar {
+    background-color: rgb(0,128,0);
+    border-radius: 20px;
+}
+
+/* Disclamer Page */
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    display: none;
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a,p,h1 {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebutton {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebutton {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
