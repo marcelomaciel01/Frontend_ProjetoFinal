@@ -32,8 +32,33 @@
                 <div id="info" class="text-font"></div>
                 <button type="button" class="savebutton" onclick="logout()">Logout</button><br><br>
             </div>
-            <div class="col-12"><div class="top-line"></div></div>
+            <div class="col-12"><div class="top-line"></div></div><br>
         </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                <select id="filtro" name="filtro">
+                    <option selected value="-1">Todas</option>
+                    <option value="0">N&atilde;o Justificadas</option>
+                    <option value="1">Justificadas</option>  
+                </select>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <button type="button" class="savebutton" onclick="buscarOCs()">Buscar</button>
+            </div>
+        </div><br>
+        <div class="row"> 
+            <div class="col-1">RACF</div>
+            <div class="col-2">Colaborador</div>
+            <div class="col-1">Data</div>
+            <div class="col-1">Horas</div>
+            <div class="col-2">Atividade</div>
+            <div class="col-3">Justificativa</div>
+            <div class="col-1">Ponto Manual</div>
+            <div class="col-1">Status</div>
+            <div class="col-12"><div class="top-line"></div></div><br>
+        </div>
+        <div id="relatorio"></div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
