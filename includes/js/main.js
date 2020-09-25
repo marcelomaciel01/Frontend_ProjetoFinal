@@ -16,10 +16,6 @@ function validaLogin() {
     else {
         let url = "http://web.equipealfa.com.br:8088/usuarios/login";
 
-        let head = {
-            "Content-type" : "application/json; charset=UTF-8"
-        };
-
         let data = {
             "racf" : user,
             "senha": pass
@@ -27,14 +23,46 @@ function validaLogin() {
 
         let options = {
             method: 'POST',
-            headers: head,
-            body: JSON.stringify(data)
+            body: JSON.stringify(data),
+            headers: {
+                "Content-type" : "application/json; charset=UTF-8"
+            }
         };
         
         fetch(url, options)
-        .then(function(response) {
-            return response.json();
+            .then(res => trataStatus(res));
+        
+        function trataStatus(res) {
+            if(res.status == 200) {
+                res.json()
+                .then(user => redirecionar(user));
+            }
+            else if(res.status == 401) {
+                document.getElementById("msgErro").innerHTML = "Senha Incorreta!";
+            }
+            else if (res.status == 404) {
+                document.getElementById("msgErro").innerHTML = "Usuario Desconhecido!";
+            }
+            else {
+                document.getElementById("msgErro").innerHTML = "Erro Desconhecido!";
+            }
+        }
 
-        });
+        function redirecionar(user) {
+            localStorage.setItem("userHE", JSON.stringify(user));
+            if(user.gestor == 0) {
+                location.href = "http://web.equipealfa.com.br/ProjetoFinal/acesso_gestor.html";
+                
+            }
+            else {
+                location.href = "http://web.equipealfa.com.br/ProjetoFinal/acesso_colaborador.html";
+            }
+        }
+        document.getElementById("loader").style.display = "none";
     }
+}
+
+function logout() {
+    localStorage.removeItem("userHE");
+    location.href = "http://web.equipealfa.com.br/ProjetoFinal/index.html";
 }
