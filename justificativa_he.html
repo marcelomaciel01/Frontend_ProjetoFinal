@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="./includes/js/justificativa.js"></script>
 </head>
-<body>
+<body onload="carregaInfos()">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -35,8 +35,8 @@
             <input type="time" id="txtNumHoras" class="form-control" readonly>
         </div>
         <div class="form-group">
-            <label for="divAtividade">Atividade</label>
-            <div id="divAtividade"></div>
+            <label for="divAtividades">Atividades</label>
+            <div id="divAtividades"></div>
         </div>
         <div class="form-group">
             <label for="txtJustificativa">Justificativa</label>
@@ -48,7 +48,7 @@
         </div>
         <div class="row">
             <div class="col-6">
-                <button type="button" class="btn btn-primary">Enviar Dados</button>
+                <button type="button" class="btn btn-primary" onclick="gravar()">Enviar Dados</button>
             </div>
             <div class="col-6">
                 <button type="button" onclick="window.history.back();"class="btn btn-secondary">Voltar</button>
